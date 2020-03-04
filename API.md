@@ -1,4 +1,4 @@
-#### 1.获取粉丝数：
+## 1.获取粉丝数：
 **请求地址：** https://api.live.bilibili.com/relation/v1/Feed/GetUserFc  
 **请求类型：** GET  
 **参数：**
@@ -17,7 +17,7 @@
     }
 }
 ~~~
-#### 2.获取IP信息：
+## 2.获取IP信息：
 **请求地址：** https://api.live.bilibili.com/client/v1/Ip/getInfoNew  
 **请求类型：** GET  
 **参数：** 无  
