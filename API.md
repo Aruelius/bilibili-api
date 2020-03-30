@@ -44,17 +44,17 @@
 
 **请求地址：** https://api.bilibili.com/x/web-interface/archive/stat   
 
-**请求类型：**GET  
+**请求类型：** GET  
 
-**参数：  **
+**参数：** 
 
 | 字段 | 必须 | 类型 | 说明         |
 | ---- | ---- | ---- | ------------ |
 | bvid | 是   | int  | 视频 BVID 号 |
 
-**返回： ** 
+**返回：** 
 
-~~~json
+~~~python
 {
     "code":0,
     "message":"0",
