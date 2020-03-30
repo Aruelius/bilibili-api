@@ -79,3 +79,39 @@
 }
 ~~~
 
+## 4. 通过 BVID 获取视频信息
+
+**请求地址：**  https://api.bilibili.com/x/player/pagelist   
+
+**请求类型：** GET  
+
+**参数：**  
+
+| 字段 | 必须 | 类型 | 说明         |
+| ---- | ---- | ---- | ------------ |
+| bvid | 是   | str  | 视频 BVID 号 |
+| jsonp| 否|str|返回类型, 不带也行|
+**返回：**  
+~~~python
+{
+    "code":0,
+    "message":"0",
+    "ttl":1,
+    "data":[
+        {
+            "cid":170532570, # 视频 cid
+            "page":1, # P1
+            "from":"vupload", # 应该是 video upload ?
+            "part":"樱之风", # 分P名称
+            "duration":231, # 时长
+            "vid":"",
+            "weblink":"",
+            "dimension":{
+                "width":1920, # 分辨率：宽
+                "height":1080, # 分辨率：高
+                "rotate":0
+            }
+        }
+    ]
+}
+~~~
