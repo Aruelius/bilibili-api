@@ -90,7 +90,7 @@
 | 字段 | 必须 | 类型 | 说明         |
 | ---- | ---- | ---- | ------------ |
 | bvid | 是   | str  | 视频 BVID 号 |
-| jsonp| 否|str|返回类型, 不带也行|
+| jsonp| 否|str|返回类型, 不带也行，默认 json|
 **返回：**  
 ~~~python
 {
@@ -113,5 +113,31 @@
             }
         }
     ]
+}
+~~~
+
+## 5. 通过 UID 获取用户直播间地址及状态
+
+**请求地址：**  https://api.live.bilibili.com/room/v1/Room/getLiveStatus   
+
+**请求类型：** GET  
+
+**参数：**   
+
+| 字段  | 必须 | 类型 | 说明                          |
+| ----- | ---- | ---- | ----------------------------- |
+| uid   | 是   | int  | 视频 BVID 号                  |
+| mid   | 否   | int  | 用户 uid                      |
+| jsonp | 否   | str  | 返回类型, 不带也行，默认 json |
+**返回：**  
+~~~python
+{
+    "code":0,
+    "msg":"",
+    "message":"",
+    "data":{
+        "status":0, # 直播间状态，0：关闭，1：开启
+        "url":"https://live.bilibili.com/553241" # 用户直播间地址
+    }
 }
 ~~~
